@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GraphML>
+  <ReplaceObject>
+    <Object id="4" obj="Box"/>
+    <Object id="8" obj="Ball"/>
+    <Object id="10" obj="Arm"/>
+    <Object id="11" obj="Arm"/>
+    <Object id="16" obj="Ball"/>
+  </ReplaceObject>
+ <KeyFrame ID="3567">
+  <Node pos_X="160" pos_Y="184" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="134" pos_Y="56" pos_Z="0" type="Unknown" id="8"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+ </KeyFrame>
+ <KeyFrame ID="3657">
+  <Node pos_X="160" pos_Y="184" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="135" pos_Y="55" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="103" pos_Y="11" pos_Z="0" type="Unknown" id="10"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="8"/>
+ </KeyFrame>
+ <KeyFrame ID="3683">
+  <Node pos_X="160" pos_Y="184" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="134" pos_Y="55" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="121" pos_Y="17" pos_Z="0" type="Unknown" id="10"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="Touching" source="8"/>
+ </KeyFrame>
+ <KeyFrame ID="3726">
+  <Node pos_X="161" pos_Y="184" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="154" pos_Y="114" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="140" pos_Y="49" pos_Z="0" type="Unknown" id="10"/>
+  <Node pos_X="111" pos_Y="5" pos_Z="0" type="Unknown" id="11"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="11" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="Touching" source="8"/>
+  <Edge target="11" relation="NoConnection" source="8"/>
+  <Edge target="11" relation="Touching" source="10"/>
+ </KeyFrame>
+ <KeyFrame ID="3738">
+  <Node pos_X="160" pos_Y="184" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="157" pos_Y="128" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="142" pos_Y="61" pos_Z="0" type="Unknown" id="10"/>
+  <Node pos_X="113" pos_Y="11" pos_Z="0" type="Unknown" id="11"/>
+  <Edge target="8" relation="Touching" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="11" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="Touching" source="8"/>
+  <Edge target="11" relation="NoConnection" source="8"/>
+  <Edge target="11" relation="Touching" source="10"/>
+ </KeyFrame>
+ <KeyFrame ID="3759">
+  <Node pos_X="161" pos_Y="185" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="149" pos_Y="126" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="129" pos_Y="51" pos_Z="0" type="Unknown" id="10"/>
+  <Node pos_X="104" pos_Y="7" pos_Z="0" type="Unknown" id="11"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="11" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="Touching" source="8"/>
+  <Edge target="11" relation="NoConnection" source="8"/>
+  <Edge target="11" relation="Touching" source="10"/>
+ </KeyFrame>
+ <KeyFrame ID="3764">
+  <Node pos_X="161" pos_Y="185" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="143" pos_Y="120" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="117" pos_Y="39" pos_Z="0" type="Unknown" id="10"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="4"/>
+  <Edge target="10" relation="NoConnection" source="8"/>
+ </KeyFrame>
+ <KeyFrame ID="3781">
+  <Node pos_X="161" pos_Y="185" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="138" pos_Y="100" pos_Z="0" type="Unknown" id="8"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+ </KeyFrame>
+ <KeyFrame ID="3837">
+  <Node pos_X="161" pos_Y="185" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="143" pos_Y="107" pos_Z="0" type="Unknown" id="8"/>
+  <Node pos_X="129" pos_Y="105" pos_Z="0" type="Unknown" id="16"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="Touching" source="8"/>
+ </KeyFrame>
+ <KeyFrame ID="3839">
+  <Node pos_X="161" pos_Y="185" pos_Z="0" type="Unknown" id="4"/>
+  <Node pos_X="143" pos_Y="107" pos_Z="0" type="Unknown" id="8"/>
+  <Edge target="8" relation="NoConnection" source="4"/>
+ </KeyFrame>
+</GraphML>

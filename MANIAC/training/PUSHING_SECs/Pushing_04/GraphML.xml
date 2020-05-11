@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GraphML>
+  <ReplaceObject>
+    <Object id="3" obj="Cup"/>
+    <Object id="4" obj="Cup"/>
+    <Object id="5" obj="Cup"/>
+    <Object id="6" obj="Cup"/>
+    <Object id="7" obj="Ball"/>
+    <Object id="16" obj="Hand"/>
+    <Object id="15" obj="Hand"/>
+  </ReplaceObject>
+ <KeyFrame ID="2944">
+  <Node pos_X="-0.216169" pos_Y="-0.0999873" pos_Z="0.969563" type="Unknown" id="3"/>
+  <Node pos_X="-0.192432" pos_Y="-0.0456037" pos_Z="0.934016" type="Unknown" id="4"/>
+  <Node pos_X="0.130854" pos_Y="0.016164" pos_Z="0.866148" type="Unknown" id="5"/>
+  <Node pos_X="0.12289" pos_Y="0.0674987" pos_Z="0.838761" type="Unknown" id="6"/>
+  <Node pos_X="-0.381199" pos_Y="0.100294" pos_Z="0.796922" type="Unknown" id="7"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+ </KeyFrame>
+ <KeyFrame ID="3103">
+  <Node pos_X="-0.215669" pos_Y="-0.10149" pos_Z="0.968567" type="Unknown" id="3"/>
+  <Node pos_X="-0.195233" pos_Y="-0.0475425" pos_Z="0.931687" type="Unknown" id="4"/>
+  <Node pos_X="0.131488" pos_Y="0.0145062" pos_Z="0.862448" type="Unknown" id="5"/>
+  <Node pos_X="0.121253" pos_Y="0.0639423" pos_Z="0.835351" type="Unknown" id="6"/>
+  <Node pos_X="-0.382508" pos_Y="0.0950957" pos_Z="0.799687" type="Unknown" id="7"/>
+  <Node pos_X="-0.448068" pos_Y="0.112624" pos_Z="0.784892" type="Unknown" id="15"/>
+  <Node pos_X="-0.464278" pos_Y="0.0352052" pos_Z="0.806832" type="Unknown" id="16"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="15" relation="NoConnection" source="3"/>
+  <Edge target="16" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="15" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="15" relation="NoConnection" source="5"/>
+  <Edge target="16" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="Touching" source="7"/>
+  <Edge target="16" relation="Touching" source="7"/>
+  <Edge target="16" relation="Touching" source="15"/>
+ </KeyFrame>
+ <KeyFrame ID="3123">
+  <Node pos_X="-0.217247" pos_Y="-0.101576" pos_Z="0.966763" type="Unknown" id="3"/>
+  <Node pos_X="-0.195417" pos_Y="-0.04769" pos_Z="0.932202" type="Unknown" id="4"/>
+  <Node pos_X="0.131093" pos_Y="0.0145785" pos_Z="0.861945" type="Unknown" id="5"/>
+  <Node pos_X="0.12093" pos_Y="0.0655242" pos_Z="0.837491" type="Unknown" id="6"/>
+  <Node pos_X="-0.380116" pos_Y="0.0938312" pos_Z="0.800189" type="Unknown" id="7"/>
+  <Node pos_X="-0.460863" pos_Y="0.0377839" pos_Z="0.806438" type="Unknown" id="16"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="16" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="16" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="Touching" source="7"/>
+ </KeyFrame>
+ <KeyFrame ID="3139">
+  <Node pos_X="-0.216759" pos_Y="-0.10181" pos_Z="0.967015" type="Unknown" id="3"/>
+  <Node pos_X="-0.193928" pos_Y="-0.0469512" pos_Z="0.932447" type="Unknown" id="4"/>
+  <Node pos_X="0.131782" pos_Y="0.0143376" pos_Z="0.862947" type="Unknown" id="5"/>
+  <Node pos_X="0.121365" pos_Y="0.0630048" pos_Z="0.833742" type="Unknown" id="6"/>
+  <Node pos_X="-0.382001" pos_Y="0.0937879" pos_Z="0.800675" type="Unknown" id="7"/>
+  <Node pos_X="-0.442445" pos_Y="0.114019" pos_Z="0.786047" type="Unknown" id="15"/>
+  <Node pos_X="-0.457941" pos_Y="0.0513414" pos_Z="0.806476" type="Unknown" id="16"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="15" relation="NoConnection" source="3"/>
+  <Edge target="16" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="15" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="15" relation="NoConnection" source="5"/>
+  <Edge target="16" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="Touching" source="7"/>
+  <Edge target="16" relation="Touching" source="7"/>
+  <Edge target="16" relation="Touching" source="15"/>
+ </KeyFrame>
+ <KeyFrame ID="3228">
+  <Node pos_X="-0.218925" pos_Y="-0.102587" pos_Z="0.965175" type="Unknown" id="3"/>
+  <Node pos_X="-0.193786" pos_Y="-0.0483365" pos_Z="0.932437" type="Unknown" id="4"/>
+  <Node pos_X="0.129659" pos_Y="0.0126791" pos_Z="0.860137" type="Unknown" id="5"/>
+  <Node pos_X="0.120476" pos_Y="0.0657" pos_Z="0.838159" type="Unknown" id="6"/>
+  <Node pos_X="-0.0654333" pos_Y="0.123405" pos_Z="0.764828" type="Unknown" id="7"/>
+  <Node pos_X="-0.157845" pos_Y="0.156057" pos_Z="0.7426" type="Unknown" id="15"/>
+  <Node pos_X="-0.298265" pos_Y="0.0733172" pos_Z="0.747271" type="Unknown" id="16"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="15" relation="NoConnection" source="3"/>
+  <Edge target="16" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="15" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="15" relation="NoConnection" source="5"/>
+  <Edge target="16" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="6"/>
+  <Edge target="15" relation="Touching" source="7"/>
+  <Edge target="16" relation="NoConnection" source="7"/>
+  <Edge target="16" relation="Touching" source="15"/>
+ </KeyFrame>
+ <KeyFrame ID="3233">
+  <Node pos_X="-0.217902" pos_Y="-0.101019" pos_Z="0.967155" type="Unknown" id="3"/>
+  <Node pos_X="-0.196458" pos_Y="-0.0479176" pos_Z="0.932505" type="Unknown" id="4"/>
+  <Node pos_X="0.130743" pos_Y="0.0130824" pos_Z="0.860971" type="Unknown" id="5"/>
+  <Node pos_X="0.121511" pos_Y="0.0641906" pos_Z="0.834399" type="Unknown" id="6"/>
+  <Node pos_X="-0.0670124" pos_Y="0.122115" pos_Z="0.764866" type="Unknown" id="7"/>
+  <Node pos_X="-0.305079" pos_Y="0.0758991" pos_Z="0.748293" type="Unknown" id="16"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="16" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="16" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="16" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="6"/>
+  <Edge target="16" relation="NoConnection" source="7"/>
+ </KeyFrame>
+ <KeyFrame ID="3270">
+  <Node pos_X="-0.215118" pos_Y="-0.102417" pos_Z="0.966604" type="Unknown" id="3"/>
+  <Node pos_X="-0.196182" pos_Y="-0.0466404" pos_Z="0.933116" type="Unknown" id="4"/>
+  <Node pos_X="0.130203" pos_Y="0.0135832" pos_Z="0.861424" type="Unknown" id="5"/>
+  <Node pos_X="0.12048" pos_Y="0.0658916" pos_Z="0.837795" type="Unknown" id="6"/>
+  <Node pos_X="-0.0637443" pos_Y="0.121565" pos_Z="0.765794" type="Unknown" id="7"/>
+  <Edge target="4" relation="Touching" source="3"/>
+  <Edge target="5" relation="NoConnection" source="3"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+  <Edge target="7" relation="NoConnection" source="3"/>
+  <Edge target="5" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="NoConnection" source="4"/>
+  <Edge target="7" relation="NoConnection" source="4"/>
+  <Edge target="6" relation="Touching" source="5"/>
+  <Edge target="7" relation="NoConnection" source="5"/>
+  <Edge target="7" relation="NoConnection" source="6"/>
+ </KeyFrame>
+</GraphML>

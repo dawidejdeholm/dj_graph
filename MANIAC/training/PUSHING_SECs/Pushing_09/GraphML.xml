@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GraphML>
+  <ReplaceObject>
+    <Object id="3" obj="Bowl"/>
+    <Object id="6" obj="Arm"/>
+  </ReplaceObject>
+ <KeyFrame ID="9005">
+  <Node pos_X="146" pos_Y="150" pos_Z="0" type="Unknown" id="3"/>
+ </KeyFrame>
+ <KeyFrame ID="9080">
+  <Node pos_X="145" pos_Y="151" pos_Z="0" type="Unknown" id="3"/>
+  <Node pos_X="232" pos_Y="138" pos_Z="0" type="Unknown" id="6"/>
+  <Edge target="6" relation="NoConnection" source="3"/>
+ </KeyFrame>
+ <KeyFrame ID="9112">
+  <Node pos_X="134" pos_Y="156" pos_Z="0" type="Unknown" id="3"/>
+  <Node pos_X="196" pos_Y="158" pos_Z="0" type="Unknown" id="6"/>
+  <Edge target="6" relation="Touching" source="3"/>
+ </KeyFrame>
+ <KeyFrame ID="9314">
+  <Node pos_X="139" pos_Y="216" pos_Z="0" type="Unknown" id="3"/>
+ </KeyFrame>
+</GraphML>
