@@ -58,6 +58,9 @@ random.shuffle(test_list)
 show_graphs(test_list, 5)
 ```
 
+# BIMANUAL DATASET
+We will add here later on how the folder structure needs to be for our parser.
+
 
 # Add tensorboard logs
 Find flag <b>_WRITE</b> and change to True.
