@@ -61,6 +61,11 @@ show_graphs(test_list, 5)
 # BIMANUAL DATASET
 We will add here later on how the folder structure needs to be for our parser.
 
+bimacs_derived_data/subject_X/task_N_k_action/take_n/
+
+
+Should have spatial_relations folder and take_n.json (ground truth)
+
 
 # Add tensorboard logs
 Find flag <b>_WRITE</b> and change to True.
