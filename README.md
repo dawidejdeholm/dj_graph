@@ -1,5 +1,8 @@
 # DJ GRAPH NETWORK
-PyTorch development for Master Thesis
+PyTorch development for Master Thesis.
+
+THIS IS EARLY ALPHA. ALL CODE SHOULD WORK, BUT NOT FULLY COMMENTED.
+Download Bimanual dataset from their website.
 
 # PyTorch Geometric installation
 https://github.com/rusty1s/pytorch_geometric#installation
