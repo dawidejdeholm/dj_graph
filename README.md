@@ -60,13 +60,13 @@ with open(os.path.join(_FOLDER + "/raw/lstm_4_training.pt"), 'wb') as f:
 
 Next remove lstm_4_*.pt in MANIAC/processed folder.
 
-DaweSuper(InMemoryDataset) will process MANIAC(Dataset) and create these files (only happens if they doesnt exsist).
+ManiacDS(InMemoryDataset) will process MANIAC(Dataset) and create these files (only happens if they doesnt exsist).
 
 To load dataset:
 ```python
-train_dataset = DaweSuper(_FOLDER, "train")
-test_ds = DaweSuper(_FOLDER, "test")
-valid_ds = DaweSuper(_FOLDER, "valid")
+train_dataset = MANIAC(_FOLDER, "train")
+test_ds = MANIAC(_FOLDER, "test")
+valid_ds = MANIAC(_FOLDER, "valid")
 ```
 
 To use DataLoader on dataset:
