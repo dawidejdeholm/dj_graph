@@ -4,7 +4,7 @@ PyTorch development for Master Thesis.
 THIS IS EARLY ALPHA. ALL CODE SHOULD WORK, BUT NOT FULLY COMMENTED.
 Download Bimanual dataset from their website.
 
-## PyTorch Geometric installation
+## Prerequisites and installation
 We recommend using a conda env. Replace ${name} with your prefered environment name.   
 ```bash
 conda create ${name}
