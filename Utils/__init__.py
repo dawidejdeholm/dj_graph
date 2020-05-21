@@ -1,3 +1,4 @@
 from .utils import *
-from .SECParser import SECParser
-from .MANIAC import MANIAC
+from .SECParser import *
+from .MANIAC import *
+from .config import *

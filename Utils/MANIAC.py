@@ -1,22 +1,34 @@
 from torch.utils.data import Dataset
+from pathlib import Path
+from pathlib import PurePath
+import networkx as nx
+import torch_geometric as tg
+import numpy as np
+from torch_scatter import scatter_add
+import torch
+import Utils.utils as util
+from Utils import SECParser as sp
+import Utils.config as conf
+
+cfg = conf.get_maniac_cfg()
 
 '''
 
     Creates MANIAC dataset to work with PyTorch Geometric.
 
 '''
-class MANIAC(Dataset):
-    def __init__(self, root_dir, window, temporal=False):
-        self.window = window
+class MANIAC_DS(Dataset):
+    def __init__(self, root_dir):
+        self.window = cfg.time_window
         self.root_dir = root_dir
-        self.all_xmls = find_xmls(self.root_dir)
-        self.sp = SECParser()
-        self.temporal = temporal
+        self.all_xmls = util.find_xmls(self.root_dir)
+        self.sp = sp.SECp()
+        self.temporal = cfg.temporal_graphs
 
         for xml in self.all_xmls:
             self.dict_with_graphs = self.sp(xml)
 
-        self.samples = create_big_list(self.dict_with_graphs)
+        self.samples = sp.create_big_list(self.dict_with_graphs)
 
     def __len__(self):
         return len(self.samples) - self.window
@@ -42,7 +54,7 @@ class MANIAC(Dataset):
             x = self.samples[idx]
 
         if self.temporal:
-            return util.concatenateTemporal(x, _relations, spatial_map)
+            return util.concatenateTemporal(x, cfg._relations, cfg.spatial_map)
         else:
             return x
 
@@ -64,7 +76,7 @@ class ManiacIMDS(InMemoryDataset):
                 root,
                 dset="train",
                 transform=None):
-        super(ManiacDS, self).__init__(root, transform)
+        super(ManiacIMDS, self).__init__(root, transform)
 
         if dset == "train":
             path = self.processed_paths[0]
@@ -77,11 +89,11 @@ class ManiacIMDS(InMemoryDataset):
 
     @property
     def raw_file_names(self):
-        return ['training_' + str(_TIME_WINDOW) + 'w.pt', 'validation_' + str(_TIME_WINDOW) + 'w.pt', 'test_' + str(_TIME_WINDOW) + 'w.pt']
+        return ['maniac_training_' + str(cfg.time_window) + 'w.pt', 'maniac_validation_' + str(cfg.time_window) + 'w.pt', 'maniac_test_' + str(cfg.time_window) + 'w.pt']
 
     @property
     def processed_file_names(self):
-        return ['training_' + str(_TIME_WINDOW) + 'w.pt', 'validation_' + str(_TIME_WINDOW) + 'w.pt', 'test_' + str(_TIME_WINDOW) + 'w.pt']
+        return ['maniac_training_' + str(cfg.time_window) + 'w.pt', 'maniac_validation_' + str(cfg.time_window) + 'w.pt', 'maniac_test_' + str(cfg.time_window) + 'w.pt']
 
     def download(self):
         return
@@ -126,7 +138,7 @@ class ManiacIMDS(InMemoryDataset):
                 # This is not used, can be useful in future development if the sequence id is needed.
                 #data.seq = torch.tensor([graph.graph['seq']])
 
-                if _SKIP_CONNECTIONS:
+                if cfg.skip_connections:
                     if data.edge_attr is not None:
                         big_data.append(data)
                 else:
@@ -140,3 +152,42 @@ class ManiacIMDS(InMemoryDataset):
                     break
 
             torch.save(self.collate(big_data), path)
+
+def test(loader, model, max_num_nodes, device):
+    model.eval()
+    ap_predict_list = np.array([])
+    ap_gt_list = np.array([])
+    
+    reconstruct_predict_list = []
+    reconstruct_gt_list = []
+    num_nodes_list = []
+
+    for data in loader:
+        data = data.to(device)
+        batch_size = data.batch[-1].item() + 1
+
+        y_hat, logvar, mu, _, y_ap = model(data)
+        pred = y_ap.max(1)[1]
+        
+        batch_size = data.batch[-1].item() + 1
+
+        one = data.batch.new_ones(data.batch.size(0))
+        num_nodes = scatter_add(one, data.batch, dim=0, dim_size=batch_size)
+        num_nodes_list.append(num_nodes.cpu().detach().numpy())
+        
+        # Creating targets
+        target_adj = util.to_dense_adj_max_node(data.edge_index, data.x, data.edge_attr, data.batch, max_num_nodes).cuda()
+        target = data.y.view(cfg.batch_size, -1)
+        y_ap_true = target.argmax(axis=1)
+        
+        prediction = y_hat.view(cfg.batch_size, -1, max_num_nodes)
+        ap_predict_list = np.append(ap_predict_list, pred.cpu().detach().numpy())
+        ap_gt_list = np.append(ap_gt_list, y_ap_true.cpu().detach().numpy())
+
+        gr_pred = prediction.cpu().detach().numpy()
+        gr_gt = target_adj.cpu().detach().numpy()
+        
+        reconstruct_predict_list.append(gr_pred)
+        reconstruct_gt_list.append(gr_gt)                
+        
+    return reconstruct_predict_list, reconstruct_gt_list, ap_predict_list, ap_gt_list, num_nodes_list

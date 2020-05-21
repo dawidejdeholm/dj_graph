@@ -2,7 +2,11 @@ import warnings
 import xml.etree.ElementTree as ET
 from glob import glob
 import networkx as nx
+import numpy as np
+import Utils.utils as util
+import Utils.config as conf
 
+cfg = conf.get_maniac_cfg()
 
 '''
 A SEC parser
@@ -11,7 +15,7 @@ Create networkx graphs from MANIACs GraphML.xml files.
 
 '''
 
-class SECParser():
+class SECp():
 
     def __init__(self, all_edges=False):
         try:
@@ -32,7 +36,7 @@ class SECParser():
             raise ValueError("Must specify path!")
 
         # Get all XML with action and sequence
-        self.action, self.seq = parse_xml_info(self.path)
+        self.action, self.seq = util.parse_xml_info(self.path)
 
         # Create the graphs
         self.create_graph(self.xml)
@@ -65,12 +69,12 @@ class SECParser():
             # Creates a Directed graph structure
             graph = nx.DiGraph()
             # Add graph features
-            graph.graph["features"] = _actions[action_map.index(self.action)]
+            graph.graph["features"] = cfg._actions[cfg.action_map.index(self.action)]
             graph.graph['seq'] = self.seq
 
             # Gets the action's identifier
-            action_id = np.argmax(_actions[action_map.index(self.action)])
-            self.actions[action_id] = action_map.index(self.action)
+            action_id = np.argmax(cfg._actions[cfg.action_map.index(self.action)])
+            self.actions[action_id] = cfg.action_map.index(self.action)
 
             # Add all nodes and edges to list.
             keyframe_id = keyframe.attrib['ID']
@@ -91,7 +95,7 @@ class SECParser():
                 # Check if the node should be added to nodes_map and gives the node a new value.
                 # The value of nodes need to be incremental order such as [0, 1, 2...., n]
                 if nodes_map.get(n_id) is None:
-                    if objects.index(replace_object_dict.get(int(n_id))) != objects.index('null'):
+                    if cfg.objects.index(replace_object_dict.get(int(n_id))) != cfg.objects.index('null'):
                         nodes_map[n_id] = node_count
                         node_count += 1
                     else:
@@ -100,20 +104,20 @@ class SECParser():
                 # Replace the nodes id with correct x feature.
                 # If acceptable, the node is added to the graph with one hot encoding of the object.
                 if int(n_id) in replace_object_dict:
-                    if objects.index(replace_object_dict.get(int(n_id))) != objects.index('null'):
-                        graph.add_node(nodes_map[n_id], x=_objects[objects.index(replace_object_dict.get(int(n_id)))])
+                    if cfg.objects.index(replace_object_dict.get(int(n_id))) != cfg.objects.index('null'):
+                        graph.add_node(nodes_map[n_id], x=cfg._objects[cfg.objects.index(replace_object_dict.get(int(n_id)))])
 
                 else:
                     # If object not defined it will be called null,
                     # this is very bad with missing features.
-                    graph.add_node(nodes_map[n_id], x=_objects[objects.index("null")])
+                    graph.add_node(nodes_map[n_id], x=cfg._objects[cfg.objects.index("null")])
                     print("This is very bad, missing features! Please look at:")
                     print("Action:", self.action, "seq:", self.seq, "keyframe:", keyframe_id, "node id:", n_id)
 
             # Check if the graph contains and edges. If not, the graph will be removed.
             if len(edges) == 0:
                 print("[SECParser] NO edge found. Need at least 1 edge for GraphNet. Added dummy value")
-                #graph.add_edge(0,0, features=_relations[spatial_map.index("dummy_value")])
+                #graph.add_edge(0,0, features=cfg_relations[spatial_map.index("dummy_value")])
                 keep_graph = False
 
             # Adds the edge relationships between nodes.
@@ -133,7 +137,7 @@ class SECParser():
                     continue
 
 
-                graph.add_edge(nodes_map[target], nodes_map[source], edge_attr=_relations[spatial_map.index(relation)])
+                graph.add_edge(nodes_map[target], nodes_map[source], edge_attr=cfg._relations[cfg.spatial_map.index(relation)])
 
             _check_graph_remapping_nodes = check_graph(graph)
             # Check that node mapping is in the right way.

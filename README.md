@@ -7,7 +7,7 @@ Download Bimanual dataset from their website.
 ## Prerequisites and installation
 We recommend using a conda env. Replace ${name} with your prefered environment name.   
 ```bash
-conda create ${name}
+conda create --name ${name}
 conda activate ${name}
 ```
 
