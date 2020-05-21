@@ -1,6 +1,10 @@
 # DJ GRAPH NETWORK
 Graph based deep learning for manipulation action recognition and graph reconstruction. 
 
+
+![Image of network](https://github.com/dawidejdeholm/dj_graph/blob/master/autoencoder.png)
+
+
 THIS IS EARLY ALPHA. ALL CODE SHOULD WORK, BUT NOT FULLY COMMENTED.
 Download Bimanual dataset from their website.
 
