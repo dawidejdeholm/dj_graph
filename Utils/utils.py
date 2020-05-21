@@ -5,7 +5,10 @@ from sklearn.preprocessing import OneHotEncoder
 import networkx as nx
 import numpy as np
 
+"""
+    Creates ont hot encoding of a list.
 
+"""
 def one_hot_string(map):
     values = np.array(map)
 
@@ -26,7 +29,11 @@ def get_action_from_encoding(enc):
 
 ####################### GRAPH #######################
 
+"""
+    Creates the temporal concatenate between graphs.
 
+    concatenateTemporal is the main function. Rest is help functions.
+"""
 def createTemporalDict(in_dict):
     temporal_concat = {}
 
