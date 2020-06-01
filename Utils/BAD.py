@@ -29,13 +29,17 @@ class BAD_DS(Dataset):
         self.samples = b_utils.generate_graphs(self.root_dir, _seperate=cfg.seperate_samples, _settings=ds_type)
         self.transform = transform
         self.window = cfg.time_window
+        self.temporal = cfg.temporal_graphs
 
     def __len__(self):
         return len(self.samples)
 
     def __getitem__(self, idx):
 
-        if self.window > 1:
+        if self.window > 0:
+
+            x = self.samples[idx:idx+self.window]
+
             current_action = self.samples[idx].graph['features']
             step_back = 0
 
@@ -50,7 +54,10 @@ class BAD_DS(Dataset):
         else:
             x = self.samples[idx]
 
-        return x
+        if self.temporal:
+            return util.concatenateTemporal(x, cfg._relations, cfg.spatial_map)
+        else:
+            return x
 
 '''
 

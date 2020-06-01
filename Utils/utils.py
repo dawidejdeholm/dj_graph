@@ -296,7 +296,7 @@ def calc_auc_roc(gt, pred, node_list, _threshold=0.5):
         
             if node_list[idx][i] == cr_nodes:
                 _max_nodes_in_graph = node_list[idx][i]
-                _correct_objects_length += 1
+                
                 _node_diff_dict[0] += 1
             else:
                 diff = cr_nodes - node_list[idx][i]
@@ -314,7 +314,6 @@ def calc_auc_roc(gt, pred, node_list, _threshold=0.5):
             _roc_auc_score += roc_auc_score(gt_flatten, cr_flatten)
             _average_precision_score += average_precision_score(gt_flatten, cr_flatten)
     
-    print("Correct node length:", _correct_objects_length, "out of", graph_count, "graphs.", _correct_objects_length/num_matrix)
-    print("Correct objects in place:", _correct_objects, "out of", _total_objects, "objects")
     print("Average ROC AUC SCORE:", _roc_auc_score/graph_count)
     print("Average precision score:", _average_precision_score/graph_count)
+    

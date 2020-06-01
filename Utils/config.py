@@ -32,13 +32,13 @@ def get_maniac_cfg():
 
     # MODEL CONFIG
     cfg.batch_size = 32
-    cfg.learning_rate = 0.001
+    cfg.learning_rate = 0.01
     cfg.dropout = 0.2
 
     # GCL channels size
     cfg.channels = 64
     # Decoder input size
-    cfg.decoder_in = 32
+    cfg.decoder_in = 64
 
     return cfg
 
@@ -70,8 +70,8 @@ def get_bac_cfg():
     cfg._objects = util.one_hot_string(cfg.objects).tolist()
 
     # Time window
-    cfg.time_window = 1
-    cfg.temporal_graphs = False
+    cfg.time_window = 8
+    cfg.temporal_graphs = True
     cfg.seperate_samples = False
 
     cfg.summery_writer = False
