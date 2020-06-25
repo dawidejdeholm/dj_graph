@@ -1,5 +1,5 @@
 # DJ GRAPH NETWORK
-Graph based deep learning for manipulation action recognition and graph reconstruction. 
+Graph based deep learning for manipulation action recognition and graph reconstruction. Full thesis can be cound at [diva](https://hh.diva-portal.org/smash/record.jsf?dswid=-1662&pid=diva2%3A1440488&c=2&searchType=SIMPLE&language=sv&query=Jacob+Harsten&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=undergraduate).
 
 
 ![Image of network](https://github.com/dawidejdeholm/dj_graph/blob/master/autoencoder.png)
